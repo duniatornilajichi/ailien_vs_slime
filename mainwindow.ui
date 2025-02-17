@@ -1,0 +1,546 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1900</width>
+    <height>1000</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <property name="minimumSize">
+    <size>
+     <width>1900</width>
+     <height>0</height>
+    </size>
+   </property>
+   <widget class="QPushButton" name="newGameBtn">
+    <property name="geometry">
+     <rect>
+      <x>560</x>
+      <y>130</y>
+      <width>161</width>
+      <height>71</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton{
+	border:none;
+	color:white;
+	font: 700 16pt &quot;Segoe Script&quot;;
+	background-color: rgb(124, 45, 14);
+	border-radius: 20px;
+}
+QPushButton:Hover
+{
+	background-color: rgb(118, 78, 46);
+}
+
+</string>
+    </property>
+    <property name="text">
+     <string>New Game</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="loadGameBtn">
+    <property name="geometry">
+     <rect>
+      <x>560</x>
+      <y>240</y>
+      <width>171</width>
+      <height>71</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton{
+	border:none;
+	color:white;
+	font: 700 16pt &quot;Segoe Script&quot;;
+	background-color: rgb(124, 45, 14);
+	border-radius: 20px;
+}
+QPushButton:Hover
+{
+	background-color: rgb(118, 78, 46);
+}</string>
+    </property>
+    <property name="text">
+     <string>Load Game</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="quitBtn">
+    <property name="geometry">
+     <rect>
+      <x>580</x>
+      <y>350</y>
+      <width>141</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton{
+	border:none;
+	color:white;
+	font: 700 16pt &quot;Segoe Script&quot;;
+	background-color: rgb(124, 45, 14);
+	border-radius: 20px;
+}
+QPushButton:Hover
+{
+	background-color: rgb(118, 78, 46);
+}</string>
+    </property>
+    <property name="text">
+     <string>Quit</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="gameLabel">
+    <property name="geometry">
+     <rect>
+      <x>530</x>
+      <y>20</y>
+      <width>221</width>
+      <height>81</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLabel{
+
+	font: 700 16pt &quot;Segoe Script&quot;;
+	
+}</string>
+    </property>
+    <property name="text">
+     <string>ALIEN VS SLIMES</string>
+    </property>
+   </widget>
+   <widget class="QWidget" name="gameWidget" native="true">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>0</y>
+      <width>1900</width>
+      <height>1200</height>
+     </rect>
+    </property>
+    <widget class="QPushButton" name="pauseButton">
+     <property name="geometry">
+      <rect>
+       <x>1750</x>
+       <y>10</y>
+       <width>131</width>
+       <height>61</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton{
+	border: 2px solid;
+	color:white;
+	font: 700 12pt &quot;Segoe Print&quot;;
+	background-color: rgb(124, 45, 14);
+	border-radius: 20px;
+}
+QPushButton:Hover
+{
+	background-color: rgb(118, 78, 46);
+}
+
+</string>
+     </property>
+     <property name="text">
+      <string>Pause</string>
+     </property>
+    </widget>
+    <widget class="QComboBox" name="comboBoxView">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>10</y>
+       <width>121</width>
+       <height>28</height>
+      </rect>
+     </property>
+     <item>
+      <property name="text">
+       <string>Color View</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Text View</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Graphic View</string>
+      </property>
+     </item>
+    </widget>
+    <widget class="QLineEdit" name="lineEdit">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>50</y>
+       <width>121</width>
+       <height>24</height>
+      </rect>
+     </property>
+    </widget>
+    <widget class="QGraphicsView" name="graphicsView">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>0</y>
+       <width>1900</width>
+       <height>1200</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true"/>
+     </property>
+    </widget>
+    <widget class="QLabel" name="loadingLabel">
+     <property name="geometry">
+      <rect>
+       <x>160</x>
+       <y>370</y>
+       <width>221</width>
+       <height>91</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QLabel{
+
+	font: 700 16pt &quot;Segoe Script&quot;;
+	
+}</string>
+     </property>
+     <property name="text">
+      <string>LOADING...</string>
+     </property>
+    </widget>
+    <widget class="QTextBrowser" name="textBrowser">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>80</y>
+       <width>151</width>
+       <height>141</height>
+      </rect>
+     </property>
+     <property name="html">
+      <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;meta charset=&quot;utf-8&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+hr { height: 1px; border-width: 0; }
+li.unchecked::marker { content: &quot;\2610&quot;; }
+li.checked::marker { content: &quot;\2612&quot;; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Segoe UI'; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;u = up&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;d = down&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;l = left&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;r = right&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;a = attack/eat/enter portal&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;p = autoplay&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+     </property>
+    </widget>
+    <widget class="QWidget" name="pauseWidget" native="true">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>0</y>
+       <width>1900</width>
+       <height>1200</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QWidget
+{
+background-color: #F5F5DC;
+border: 1px solid;
+}</string>
+     </property>
+     <widget class="QPushButton" name="conBtn">
+      <property name="geometry">
+       <rect>
+        <x>110</x>
+        <y>30</y>
+        <width>131</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton{
+	border:none;
+	color:white;
+	font: 700 16pt &quot;Segoe Script&quot;;
+	background-color: rgb(124, 45, 14);
+	border-radius: 20px;
+}
+QPushButton:Hover
+{
+	background-color: rgb(118, 78, 46);
+}
+
+</string>
+      </property>
+      <property name="text">
+       <string>Continue</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="saveBtn">
+      <property name="geometry">
+       <rect>
+        <x>110</x>
+        <y>130</y>
+        <width>141</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton{
+	border:none;
+	color:white;
+	font: 700 16pt &quot;Segoe Script&quot;;
+	background-color: rgb(124, 45, 14);
+	border-radius: 20px;
+}
+QPushButton:Hover
+{
+	background-color: rgb(118, 78, 46);
+}
+
+</string>
+      </property>
+      <property name="text">
+       <string>Save Game</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="quitBtnPause">
+      <property name="geometry">
+       <rect>
+        <x>110</x>
+        <y>180</y>
+        <width>131</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton{
+	border:none;
+	color:white;
+	font: 700 16pt &quot;Segoe Script&quot;;
+	background-color: rgb(124, 45, 14);
+	border-radius: 20px;
+}
+QPushButton:Hover
+{
+	background-color: rgb(118, 78, 46);
+}
+
+</string>
+      </property>
+      <property name="text">
+       <string>Quit</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="newGamePauseBtn">
+      <property name="geometry">
+       <rect>
+        <x>110</x>
+        <y>80</y>
+        <width>131</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton{
+	border:none;
+	color:white;
+	font: 700 16pt &quot;Segoe Script&quot;;
+	background-color: rgb(124, 45, 14);
+	border-radius: 20px;
+}
+QPushButton:Hover
+{
+	background-color: rgb(118, 78, 46);
+}
+
+</string>
+      </property>
+      <property name="text">
+       <string>New Game</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="endLabel">
+      <property name="geometry">
+       <rect>
+        <x>760</x>
+        <y>580</y>
+        <width>331</width>
+        <height>181</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QLabel{
+
+	font: 700 30pt &quot;Segoe Script&quot;;
+	
+}</string>
+      </property>
+      <property name="text">
+       <string>END</string>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QProgressBar" name="healthBar">
+     <property name="geometry">
+      <rect>
+       <x>1750</x>
+       <y>90</y>
+       <width>131</width>
+       <height>23</height>
+      </rect>
+     </property>
+     <property name="value">
+      <number>24</number>
+     </property>
+    </widget>
+    <widget class="QProgressBar" name="energyBar">
+     <property name="geometry">
+      <rect>
+       <x>1750</x>
+       <y>120</y>
+       <width>131</width>
+       <height>23</height>
+      </rect>
+     </property>
+     <property name="palette">
+      <palette>
+       <active>
+        <colorrole role="Highlight">
+         <brush brushstyle="SolidPattern">
+          <color alpha="255">
+           <red>255</red>
+           <green>255</green>
+           <blue>0</blue>
+          </color>
+         </brush>
+        </colorrole>
+       </active>
+       <inactive>
+        <colorrole role="Highlight">
+         <brush brushstyle="SolidPattern">
+          <color alpha="255">
+           <red>255</red>
+           <green>255</green>
+           <blue>0</blue>
+          </color>
+         </brush>
+        </colorrole>
+       </inactive>
+       <disabled/>
+      </palette>
+     </property>
+     <property name="value">
+      <number>24</number>
+     </property>
+    </widget>
+    <zorder>graphicsView</zorder>
+    <zorder>comboBoxView</zorder>
+    <zorder>lineEdit</zorder>
+    <zorder>loadingLabel</zorder>
+    <zorder>pauseButton</zorder>
+    <zorder>textBrowser</zorder>
+    <zorder>healthBar</zorder>
+    <zorder>energyBar</zorder>
+    <zorder>pauseWidget</zorder>
+   </widget>
+   <widget class="QWidget" name="saveWidget" native="true">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>440</y>
+      <width>451</width>
+      <height>271</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QWidget
+{
+background-color: #F5F5DC;
+}</string>
+    </property>
+    <widget class="QPushButton" name="backBtnSave">
+     <property name="geometry">
+      <rect>
+       <x>180</x>
+       <y>220</y>
+       <width>111</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton{
+	border:none;
+	color:white;
+	font: 700 16pt &quot;Segoe Script&quot;;
+	background-color: rgb(124, 45, 14);
+	border-radius: 20px;
+}
+QPushButton:Hover
+{
+	background-color: rgb(118, 78, 46);
+}
+
+</string>
+     </property>
+     <property name="text">
+      <string>Back</string>
+     </property>
+    </widget>
+    <widget class="QWidget" name="saveGamesWidget" native="true">
+     <property name="geometry">
+      <rect>
+       <x>100</x>
+       <y>30</y>
+       <width>251</width>
+       <height>171</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QWidget{
+border: 2px solid;
+}</string>
+     </property>
+    </widget>
+   </widget>
+   <zorder>gameWidget</zorder>
+   <zorder>newGameBtn</zorder>
+   <zorder>loadGameBtn</zorder>
+   <zorder>quitBtn</zorder>
+   <zorder>gameLabel</zorder>
+   <zorder>saveWidget</zorder>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1900</width>
+     <height>21</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

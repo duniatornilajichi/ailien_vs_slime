@@ -1,0 +1,21 @@
+<RCC>
+    <qresource prefix="/">
+        <file>image_001.jpg</file>
+        <file>images/PROTAGONIST_SHEET.png</file>
+        <file>images/HEALTHPACK.png</file>
+        <file>images/ENEMY.png</file>
+        <file>images/P_ENEMY.png</file>
+        <file>images/X_ENEMY.png</file>
+        <file>images/P_TERRAIN.png</file>
+        <file>images/image_002.png</file>
+        <file>images/OverlayTiles.png</file>
+        <file>images/PORTAL.png</file>
+        <file>images/DAMAGE.png</file>
+        <file>image_003.png</file>
+        <file>image_002.png</file>
+        <file>image_004.png</file>
+        <file>image_005.png</file>
+        <file>images/ENERGYPACK.png</file>
+        <file>images/FatMaze_30_30.png</file>
+    </qresource>
+</RCC>
